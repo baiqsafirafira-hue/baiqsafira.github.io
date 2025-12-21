@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Baisafira Rahmadini</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                        'slide-up': 'slideUp 1.2s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .animation-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .animation-delay-1400 {
+            animation-delay: 1.4s;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white scroll-smooth">
+
+    <!-- Hero Section yang lebih bagus dan enak dipandang -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden"
+        style="background-image: url('https://www.shutterstock.com/shutterstock/photos/2183627747/display_1500/stock-vector-purple-and-pink-modern-abstract-background-vector-illustration-2183627747.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <!-- Teks Pembuka dengan nama putih biasa tapi efek gerak halus -->
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-fade-in">
+                <span class="text-white">Hai, saya</span>
+                <br>
+                <span class="block mt-4 text-white text-6xl md:text-8xl animate-float drop-shadow-2xl">
+                    Baiq safira
+                </span>
+            </h1>
+
+            <!-- Deskripsi -->
+            <p class="text-xl md:text-3xl mb-10 opacity-0 animate-slide-up animation-delay-600 text-gray-200">
+                Mahasiswa Semester 3<br>Universitas Hamzanwadi
+            </p>
+
+            <!-- Tombol -->
+            <div class="opacity-0 animate-slide-up animation-delay-1000">
+                <a href="#about"
+                    class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Jelajahi Portfolio
+                </a>
+            </div>
+        </div>
+
+        <!-- Panah ke bawah -->
+        <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-0 animate-slide-up animation-delay-1400">
+            <i class="fas fa-chevron-down text-4xl text-white"></i>
+        </div>
+    </section>
+
+    <!-- Navigation Fixed -->
+    <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <ul class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12 text-lg">
+                <li><a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-indigo-400 transition-colors duration-300">skill</a></li>
+                <li><a href="#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a></li>
+                <li><a href="#github" class="hover:text-indigo-400 transition-colors duration-300">GitHub</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">About Me</h2>
+            <div class="bg-gray-900 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:shadow-indigo-500/30">
+                <!-- Foto profil placeholder (ganti dengan foto kamu sendiri nanti) -->
+                <div class="flex justify-center mb-8">
+                    <img src="foto.jpeg" alt="Baisafira Rahmadini"
+                        class="w-48 h-48 rounded-full object-cover border-4 border-indigo-400 shadow-lg">
+                </div>
+
+                <p class="text-lg leading-relaxed text-gray-300 text-center md:text-left">
+                    Saya adalah mahasiswa di <span class="font-semibold text-indigo-300">Universitas Hamzanwadi</span>.
+                    Saat ini saya sedang mendalami bidang Teknik Informatika
+                    Saya sangat tertarik dengan pengembangan web, pemrograman, dan teknologi digital.
+                    Portfolio ini menampilkan perjalanan dan proyek-proyek saya selama kuliah.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">
+                My Skills
+            </h2>
+
+            <div class="space-y-8">
+
+                <!-- Python -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-python text-2xl text-yellow-400"></i>
+                            <span class="font-semibold text-lg">Python</span>
+                        </div>
+                        <span class="text-sm text-gray-400">65%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-3">
+                        <div class="bg-indigo-500 h-3 rounded-full w-[65%]"></div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                            <span class="font-semibold text-lg">HTML</span>
+                        </div>
+                        <span class="text-sm text-gray-400">50%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-3">
+                        <div class="bg-indigo-500 h-3 rounded-full w-[50%]"></div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-css3-alt text-2xl text-blue-500"></i>
+                            <span class="font-semibold text-lg">CSS</span>
+                        </div>
+                        <span class="text-sm text-gray-400">45%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-3">
+                        <div class="bg-indigo-500 h-3 rounded-full w-[45%]"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-js text-2xl text-yellow-300"></i>
+                            <span class="font-semibold text-lg">JavaScript</span>
+                        </div>
+                        <span class="text-sm text-gray-400">30%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-3">
+                        <div class="bg-indigo-500 h-3 rounded-full w-[30%]"></div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <!-- Tailwind CSS -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-wind text-cyan-400 text-2xl"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <span>15%</span>
+                    </div>
+                    <div class="bg-gray-700 h-3 rounded-full">
+                        <div class="bg-indigo-500 h-3 rounded-full w-[15%]"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">Contact</h2>
+            <div class="bg-gray-800 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:shadow-indigo-500/20">
+                <p class="text-lg mb-6 text-gray-300">Hubungi saya melalui:</p>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center"><i class="fas fa-envelope mr-4 text-indigo-400"></i> Email:
+                        [baiqsafirafira@gmail.com]</li>
+                    <li class="flex items-center"><i class="fas fa-phone mr-4 text-indigo-400"></i> Telepon: [XXXXXXX]
+                    </li>
+                    <li class="flex items-center"><i class="fab fa-instagram mr-4 text-indigo-400"></i> Instagram: <a
+                            href="https://instagram.com/[username-anda]" target="_blank"
+                            class="text-indigo-300 hover:underline">https://www.instagram.com/safirarahmdini?igsh=MTJrendtdm01aHVldA==</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">GitHub</h2>
+            <div
+                class="bg-gray-900 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:shadow-indigo-500/20 text-center">
+                <p class="text-lg mb-6 text-gray-300">Lihat proyek saya di GitHub:</p>
+                <a href="https://github.com/baiqsafirafira-hue" target="_blank"
+                    class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-github mr-2"></i> github.com/baiqsafirafira-hue
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
